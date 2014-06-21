@@ -12,7 +12,7 @@ function receiveMessage(event)
                                                        && event.origin !== "http://localhost:8000")
     return;
 
-  alert('received: '+event.data
+  alert('received: '+event.data);
 }
    
    window.addEventListener("message", receiveMessage, false);
