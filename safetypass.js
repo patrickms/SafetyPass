@@ -26,6 +26,7 @@
          ifrm.contentWindow.postMessage(document.domain,"*");
       else if(event.data === "Close SafetyPass")
          ifrm.remove();
+         window.removeEventListener("message", receiveMessage);
          //alert(document.domain);
    }
    
