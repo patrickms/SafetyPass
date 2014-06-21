@@ -8,6 +8,15 @@
     var hash = CryptoJS.MD5("Message");
     //alert("Message: "+hash)
     window.parent.postMessage("Meow","*");
+    window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        alert(event.data());
+        
+          // ...
+    }
+
 </script>
 </body>
 </html>
