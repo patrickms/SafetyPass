@@ -6,7 +6,8 @@
 
 <script>
     var hash = CryptoJS.MD5("Message");
-    alert("Message: "+hash)
+    //alert("Message: "+hash)
+    window.parent.postMessage(hash);
 </script>
 </body>
 </html>
