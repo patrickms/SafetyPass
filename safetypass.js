@@ -11,7 +11,10 @@
       alert('message from '+event.origin)
       if (event.origin !== "http://patrickms.github.io" && event.origin !== "https://patrickms.github.io"
                                                        && event.origin !== "http://localhost:8000")
+      {
+         alert("Bad domain:"+event.origin+", returning")
        return;
+      }
 
      // if(event.data === "Which Domain?")
          ifrm.postMessage(document.domain,"*");
