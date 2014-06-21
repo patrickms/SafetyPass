@@ -8,17 +8,17 @@
 
    function receiveMessage(event)
    {
-      alert('message from '+event.origin)
+      //alert('message from '+event.origin)
       if (event.origin !== "http://patrickms.github.io" && event.origin !== "https://patrickms.github.io"
                                                        && event.origin !== "http://localhost:8000")
       {
-         alert("Bad domain:"+event.origin+", returning")
+         console.log("Message from a bad domain:"+event.origin+", returning")
        return;
       }
 
      // if(event.data === "Which Domain?")
          ifrm.contentWindow.postMessage(document.domain,"*");
-         alert(document.domain);
+         //alert(document.domain);
    }
    
    window.addEventListener("message", receiveMessage, false);
