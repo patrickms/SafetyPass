@@ -1,6 +1,6 @@
 (function() { 
    alert('test');
-   ifrm = document.createElement("IFRAME"); 
+   var ifrm = document.createElement("IFRAME"); 
    ifrm.setAttribute("src", "http://patrickms.github.io/SafetyPass/safetypass.html"); 
    ifrm.style.width = 100+"%"; 
    ifrm.style.height = 200+"px"; 
@@ -12,11 +12,11 @@
                                                        && event.origin !== "http://localhost:8000")
        return;
 
-      alert('received: '+event.data);
+      if(event.data === "Which Domain?")
+         ifrm.postMessage(document.domain,"*");
    }
    
    window.addEventListener("message", receiveMessage, false);
-
 
 })();
 
