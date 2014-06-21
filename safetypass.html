@@ -57,8 +57,8 @@ width:100%;
             </div>
         </div>
          <br>
-        <div style="width: 100%; float:left">
-            <p id="copyme"></p>
+        <div id="copyme" style="width: 100%; float:left">
+            <p></p>
         </div>
          <br>
         <div style="width: 100%; float:left">
@@ -92,7 +92,7 @@ width:100%;
         //alert("hash: "+hash)
         var domainPass=document.getElementById("domainpass");
         domainPass.setAttribute("value","A$"+hash.toString());
-        domainPass.select();
+        //domainPass.select();
         domainPass.selectionStart=0;
         domainPass.selectionEnd=domainPass.value.length;
         document.getElementById("copyme").setAttribute("innerHTML","Copy the password above...")
