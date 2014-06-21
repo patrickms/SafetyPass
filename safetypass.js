@@ -1,5 +1,4 @@
 (function() { 
-   alert('test');
    var ifrm = document.createElement("IFRAME"); 
    ifrm.setAttribute("src", "https://patrickms.github.io/SafetyPass/safetypass.html"); 
    ifrm.style.width = 100+"%"; 
@@ -7,6 +6,7 @@
    ifrm.style.top=1+"em";
    ifrm.style.left=1+"em";
    ifrm.style.position="fixed";
+   ifrm.allowtransparency="false";
    document.body.appendChild(ifrm); 
    document.body.insertBefore(ifrm, document.body.firstChild);
 
