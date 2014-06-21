@@ -25,8 +25,9 @@
      if(event.data === "Which Domain?")
          ifrm.contentWindow.postMessage(document.domain,"*");
       else if(event.data === "Close SafetyPass")
-         ifrm.remove();
          window.removeEventListener("message", receiveMessage);
+         ifrm.style.visibility="hidden";
+         setTimeout(function(){ifrm.remove();}, 10);
          //alert(document.domain);
    }
    
