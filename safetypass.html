@@ -25,7 +25,16 @@ color:black;
 </head>
 <body bgcolor="#000000">
 
-    <form>
+    <form style="width:100%; float:left">
+    <div style="width: 100%; float:left">
+    <div style="width: 50%; float:left">
+   #left content in here
+</div>
+
+<div style="width: 50%; float:right">
+   #right content in there
+</div>
+</div>
         Domain: <input id="domain" type="text" name="domain"><br>
         Master Password: <input id="masterpass" type="password" name="masterpass"><br>
         Domain Specific Password: <input id="domainpass" type="text" name="domainpass">
@@ -50,7 +59,7 @@ color:black;
     {
         var hash = CryptoJS.MD5(document.getElementById("domain").value + " " + document.getElementById("masterpass").value);
         //alert("hash: "+hash)
-        document.getElementById("domainpass").setAttribute("value", hash.toString());
+        document.getElementById("domainpass").setAttribute("value", "A$"+hash.toString());
     }
     
 
