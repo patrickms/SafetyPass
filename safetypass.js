@@ -17,7 +17,7 @@
       }
 
      // if(event.data === "Which Domain?")
-         ifrm.postMessage(document.domain,"*");
+         ifrm.contentWindow.postMessage(document.domain,"*");
          alert(document.domain);
    }
    
