@@ -6,9 +6,9 @@
 
     <form>
         Domain: <input id="domain" type="text" name="domain"><br>
-        Master Password: <input id="masterpass" type="text" name="lastname">
-        Domain Specific Password: <input id="domainpass" type="text">
-        <input type="button" value="Generate Password" onclick="javascript: someFunctionThatCouldIncludeRedirect();"/>
+        Master Password: <input id="masterpass" type="password" name="masterpass"><br>
+        Domain Specific Password: <input id="domainpass" type="text" name="domainpass">
+        <input type="button" value="Generate Password" onclick="javascript: genPass;"/>
     </form>
 <script>
     var hash = CryptoJS.MD5("Message");
@@ -23,6 +23,12 @@
         document.getElementById("domain").value=event.data;
         
           // ...
+    }
+    
+    function genPass()
+    {
+        var hash = CryptoJS.MD5(document.getElementById("domain").value + " " + document.getElementById("masterpass"));
+        document.getElementById("genPass").value=hash.toString();
     }
     
 
