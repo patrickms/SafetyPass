@@ -28,8 +28,8 @@
     function genPass()
     {
         var hash = CryptoJS.MD5(document.getElementById("domain").value + " " + document.getElementById("masterpass").value);
-        alert("hash: "+hash)
-        document.getElementById("genPass").value=hash.toString();
+        //alert("hash: "+hash)
+        document.getElementById("genPass").setAttribute("value", hash.toString());
     }
     
 
