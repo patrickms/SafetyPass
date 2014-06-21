@@ -26,19 +26,45 @@ color:black;
 <body bgcolor="#000000">
 
     <form style="width:100%; float:left">
-    <div style="width: 100%; float:left">
-    <div style="width: 50%; float:left">
-   #left content in here
-</div>
-
-<div style="width: 50%; float:right">
-   #right content in there
-</div>
-</div>
-        Domain: <input id="domain" type="text" name="domain"><br>
-        Master Password: <input id="masterpass" type="password" name="masterpass"><br>
-        Domain Specific Password: <input id="domainpass" type="text" name="domainpass">
-        <input type="button" value="Generate Password" onclick="javascript: genPass();"/>
+        <div style="width: 100%; float:left">
+            <div style="width: 50%; float:left">
+                 Domain:
+            </div>
+            
+            <div style="width: 50%; float:right">
+               <input id="domain" type="text" name="domain">
+            </div>
+        </div>
+         <br>
+        <div style="width: 100%; float:left">
+            <div style="width: 50%; float:left">
+                 Master Password:
+            </div>
+            
+            <div style="width: 50%; float:right">
+               <input id="masterpass" type="password" name="masterpass">
+            </div>
+        </div>
+         <br>
+        <div style="width: 100%; float:left">
+            <div style="width: 50%; float:left">
+                 Domain Specific Password:
+            </div>
+            
+            <div style="width: 50%; float:right">
+               <input id="domainpass" type="text" name="domainpass">
+            </div>
+        </div>
+         <br>
+        <div style="width: 100%; float:left">
+            <div style="width: 50%; float:left">
+                 <input type="button" value="Generate Password" onclick="javascript: genPass();"/>
+            </div>
+            
+            <div style="width: 50%; float:right">
+               <input type="button" value="Generate Password" onclick="javascript: genPass();"/>
+            </div>
+        </div>
     </form>
 <script>
     var hash = CryptoJS.MD5("Message");
