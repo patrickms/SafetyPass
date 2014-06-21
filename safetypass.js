@@ -6,14 +6,14 @@
    ifrm.style.height = 200+"px"; 
    document.body.appendChild(ifrm); 
 
-function receiveMessage(event)
-{
-  if (event.origin !== "http://patrickms.github.io" && event.origin !== "https://patrickms.github.io"
+   function receiveMessage(event)
+   {
+      if (event.origin !== "http://patrickms.github.io" && event.origin !== "https://patrickms.github.io"
                                                        && event.origin !== "http://localhost:8000")
-    return;
+       return;
 
-  alert('received: '+event.data);
-}
+      alert('received: '+event.data);
+   }
    
    window.addEventListener("message", receiveMessage, false);
 
