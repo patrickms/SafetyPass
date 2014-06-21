@@ -8,6 +8,7 @@
     var hash = CryptoJS.MD5("Message");
     //alert("Message: "+hash)
     window.parent.postMessage("Which Domain?","*");
+    alert('sent');
     window.addEventListener("message", receiveMessage, false);
 
     function receiveMessage(event)
