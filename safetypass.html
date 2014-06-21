@@ -29,7 +29,7 @@
     {
         var hash = CryptoJS.MD5(document.getElementById("domain").value + " " + document.getElementById("masterpass").value);
         //alert("hash: "+hash)
-        document.getElementById("genPass").setAttribute("value", hash.toString());
+        document.getElementById("domainpass").setAttribute("value", hash.toString());
     }
     
 
