@@ -4,11 +4,18 @@
 </head>
 <body>
 
+    <form>
+        Domain: <input id="domain" type="text" name="domain"><br>
+        Master Password: <input id="masterpass" type="text" name="lastname">
+        Domain Specific Password: <input id="domainpass" type="text">
+        <input type="button" value="Generate Password" onclick="javascript: someFunctionThatCouldIncludeRedirect();"/>
+    </form>
 <script>
     var hash = CryptoJS.MD5("Message");
+    var PARENT_DOMAIN=""
     //alert("Message: "+hash)
     window.parent.postMessage("Which Domain?","*");
-    alert('sent');
+    //alert('sent');
     window.addEventListener("message", receiveMessage, false);
 
     function receiveMessage(event)
@@ -17,6 +24,7 @@
         
           // ...
     }
+    
 
 </script>
 </body>
