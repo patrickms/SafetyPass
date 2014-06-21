@@ -22,8 +22,10 @@
        return;
       }
 
-     // if(event.data === "Which Domain?")
+     if(event.data === "Which Domain?")
          ifrm.contentWindow.postMessage(document.domain,"*");
+      else if(event.data === "Close SafetyPass")
+         ifrm.remove();
          //alert(document.domain);
    }
    
