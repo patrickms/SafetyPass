@@ -8,7 +8,7 @@
         Domain: <input id="domain" type="text" name="domain"><br>
         Master Password: <input id="masterpass" type="password" name="masterpass"><br>
         Domain Specific Password: <input id="domainpass" type="text" name="domainpass">
-        <input type="button" value="Generate Password" onclick="javascript: genPass;"/>
+        <input type="button" value="Generate Password" onclick="javascript: genPass();"/>
     </form>
 <script>
     var hash = CryptoJS.MD5("Message");
