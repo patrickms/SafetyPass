@@ -6,6 +6,7 @@
    ifrm.style.top=1+"em";
    ifrm.style.left=1+"em";
    ifrm.style.position="fixed";
+   ifrm.style.zIndex=1000000;
    ifrm.allowtransparency="false";
    document.body.appendChild(ifrm); 
    document.body.insertBefore(ifrm, document.body.firstChild);
