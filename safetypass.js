@@ -14,6 +14,7 @@
 
      // if(event.data === "Which Domain?")
          ifrm.postMessage(document.domain,"*");
+         alert(document.domain);
    }
    
    window.addEventListener("message", receiveMessage, false);
