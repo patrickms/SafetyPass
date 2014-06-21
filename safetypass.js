@@ -8,6 +8,7 @@
 
    function receiveMessage(event)
    {
+      alert('message from '+event.origin)
       if (event.origin !== "http://patrickms.github.io" && event.origin !== "https://patrickms.github.io"
                                                        && event.origin !== "http://localhost:8000")
        return;
